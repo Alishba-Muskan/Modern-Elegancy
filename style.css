@@ -471,7 +471,8 @@ nav input {
     width: 100%;
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    box-shadow: 0 20px 25px rgb(0, 0, 0);
 }
 
 .overlay-image {
@@ -582,7 +583,7 @@ nav input {
   }
   
   .slider1 {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
     height: 300px;
     margin: auto;
@@ -626,13 +627,19 @@ nav input {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    border-right: 1px solid #ddd;
-  }
+    border-right: 1px solid #ddd; 
+ }
   
 
 .slide-track1 img {
     height: 300px;
     width: 300px;
+    border: 1px solid black;
+    border-radius: 8%;
+}
+
+.slide-track1 div{
+    margin-left: 0.8%;
 }
 
 
@@ -652,7 +659,7 @@ nav input {
 .product-card {
     background: white;
     border-radius: 15px;
-    box-shadow: 0 4px 10px #1d1d1d;
+    box-shadow: 0 15px 15px #1d1d1ddc;
     overflow: hidden;
     max-width: 280px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
