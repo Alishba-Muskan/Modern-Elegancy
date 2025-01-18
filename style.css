@@ -1337,7 +1337,7 @@ input:focus {
 }
 
 .payment-icons img {
-    height: 25px;
+    height: 45px;
     margin: 0 8px;
     transition: transform 0.3s;
 }
