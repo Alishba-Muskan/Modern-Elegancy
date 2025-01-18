@@ -1103,13 +1103,15 @@ input:focus {
 /* customer */
 #customer-reviews {
     padding: 50px 15px;
-    background-color: #a9b3b2b9;
-    color: #000000;
+    background-color: #00000000;
+   color: #000000;
+
   }
   
   
   .review-card {
     background-color: #fff;
+
   }
   
   .review-card:hover {
