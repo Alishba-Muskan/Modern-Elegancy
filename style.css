@@ -1442,3 +1442,175 @@ input:focus {
     align-items: center;
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+/* Features Section */
+.features {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: -6%;
+    margin-top: -5%;
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature-item {
+    flex: 1 1 300px;
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+  }
+  
+  .feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border: 2px solid #002925;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #002925;
+  }
+  
+  .feature-item h3 {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .feature-item p {
+    font-size: 14px;
+    color: #1d1d1d;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .features-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+  .modern-subscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    height: 250px;
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .subscription-box {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .subscription-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  .subscription-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .subscription-input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .subscription-input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+  }
+
+  .subscription-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #002925;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .subscription-button:hover {
+    background: #1d1d1d;
+  }
+
+  @media (max-width: 600px) {
+    .subscription-box {
+      padding: 15px;
+    }
+
+    .subscription-title {
+      font-size: 24px;
+    }
+
+    .subscription-text {
+      font-size: 14px;
+    }
+
+    .subscription-input,
+    .subscription-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+
+
+
+
+
+
+
+  
