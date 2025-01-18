@@ -911,6 +911,7 @@ nav input {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0 20px 25px rgb(0, 0, 0);
   }
 
   .text-section {
@@ -923,11 +924,12 @@ nav input {
   .text-section h1 {
     font-size: 2rem;
     margin-bottom: 20px;
+    color: black;
   }
 
   .text-section p {
     font-size: 1rem;
-    color: #666;
+    color: #1d1d1d;
     margin-bottom: 20px;
   }
 
@@ -942,7 +944,7 @@ nav input {
 
   .text-section .service p {
     font-size: 0.9rem;
-    color: #666;
+    color: #1d1d1d;
   }
 
   @media (max-width: 768px) {
