@@ -225,7 +225,7 @@ nav .navbar {
 
 .navbar .nav-links {
     display: inline-flex;
-    margin-left: 5.5%;
+    margin-left: 5vw;
 }
 
 .nav-links li {
