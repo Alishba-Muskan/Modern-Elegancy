@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modern Elegancy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <script src="./script.js"></script>
+</head>
+<body>
+<div class="preloader">
+  <div class="preloader-content">
+    <div class="furniture-assembly">
+      <!-- Wood Planks -->
+      <div class="wood-plank top"></div>
+      <div class="wood-plank bottom"></div>
+      <div class="wood-plank left"></div>
+      <div class="wood-plank right"></div>
+
+      <div class="screws">
+        <i class="fas fa-cogs"></i>
+      </div>
+      <div class="hammer">
+        <i class="fas fa-hammer"></i>
+      </div>
+      <div class="pliers">
+        <i class="fas fa-wrench"></i> 
+      </div>
+      <div class="dust-cloud"></div>
+      <div class="furniture-item">
+        <div class="table"></div>
+        <div class="chair"></div>
+      </div>
+    </div>
+    <div class="loading-text">Building Your Dream Furniture...</div>
+  </div>
+</div>
+
+<main>
+  <nav class="nav1">
+    <div class="search-container">
+      <input style="display: block;" type="text" id="search" placeholder="Search products...">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+    <div class="logo">
+      <img class="img-fluid" src="./asstes/logo.png" alt="Logo">
+    </div>
+    <div class="cart-container">
+      <label class="bag-icon"><i class='bx bxs-shopping-bags cart-icon'></i><span id="cart-notification"
+        class="cart-notification">0</span></label>   
+      </div>
+  </nav>
+  <div class="home">
+    <a href="">Home</a>
+    <a href="./About.html">About</a>
+    <a href="">Contact</a>
+  </div>
+  <nav>
+    <a href=""></a>
+    <div class="navbar">
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li>
+          <a href="./Product.html" class="product">Furniture</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Living Room Furnit :</a>
+                <a href="#">Home Office Furnit</a>
+                <a href="#">Bedroom Furniture</a>
+                <a href="#">Entryway & Hallway Furnit</a>
+                <a href="#">Baby & Kids</a>
+              </div>
+              <div class="row">
+                <a href="#">Kitchen & Dining Furnit</a>
+                <a href="#">Beds</a>
+                <a href="#">Nightstands</a>
+                <a href="#">Bedroom sets</a>
+                <a href="#">Dressers</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/1.jpg" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">Decor</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">All Wall Arts</a>
+                <a href="#">Photography</a>
+                <a href="#">Paintings</a>
+                <a href="#">Wall accents</a>
+                <a href="#">Wall Mirrors</a>
+                <a href="#">Decor Plates, Bowls</a>
+                <a href="#">Decorative Objects</a>
+                <a href="#">Wall Clocks</a>
+              </div>
+              <div class="row">
+                <a href="#">Floral Wallpapers</a>
+                <a href="#">Foux Floral</a>
+                <a href="#">Faux Plants & Trees</a>
+                <a href="#">Decor basket & bins</a>
+                <a href="#">Wall Shelves</a>
+                <a href="#">Home Fragnances</a>
+                <a href="#">Decorative Pillows</a>
+                <a href="#">Vases</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/2.webp" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">Outdoor</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Outdoor Sofa Sets</a>
+                <a href="#">Outdoor Sectionals</a>
+                <a href="#">Chase Lounges</a>
+                <a href="#">Outdoor Daybeds</a>
+                <a href="#">Outdoor Benches</a>
+                <a href="#">Coffee Tables</a>
+                <a href="#">Outdoor Side Tables</a>
+                <a href="#">Rockers & Gliders</a>
+              </div>
+              <div class="row">
+                <a href="#">Outdoor Planters</a>
+                <a href="#">Outdoor Pillows</a>
+                <a href="#">Outdoor Rugs</a>
+                <a href="#">Patio Umbrella</a>
+                <a href="#">Outdoor Fireplace</a>
+                <a href="#">Furniture Cushions</a>
+                <a href="#">Outdoor Wall Lights</a>
+                <a href="#">Landscape Lightings</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/3.webp" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">Lighting</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+              </div>
+              <div class="row">
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/4.webp" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">Rugs</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+              </div>
+              <div class="row">
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/5.webp" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">Bedding</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+              </div>
+              <div class="row">
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/6.webp" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">Bath</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+              </div>
+              <div class="row">
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/7.webp" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">kitchen</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+              </div>
+              <div class="row">
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/8.webp" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">Dining</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliance</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+              </div>
+              <div class="row">
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/9.webp" alt="">
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="./Product.html" class="product">Brands</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="pro-list"></label>
+          <div class="list-box">
+            <div class="content">
+              <div style="border: none;" class="row">
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+                <a href="#">Kitchen Appliances</a>
+              </div>
+              <div class="row">
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+                <a href="#">Office Appliances</a>
+              </div>
+              <img style="height: 15rem;" src="./asstes/1.jpg" alt="">
+            </div>
+          </div>
+        </li>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+        aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <!-- <a href=""><video style="height: auto; width: 100%; max-width: 100%; object-fit: cover;" class="d-block w-100"
+            autoplay loop muted plays-inline>
+            <source src="./asstes/video.mp4" type="video/mp4">
+          </video></a> -->
+          <a href=""><img src="./asstes/carasol6.png" class="d-block w-100" alt="..."></a>
+      </div>
+      <div class="carousel-item"><a href=""><img src="./asstes/carasol1.jpg" class="d-block w-100" alt="..."></a></div>
+      <div class="carousel-item"><a href=""><img src="./asstes/carasol3.webp" class="d-block w-100" alt="..."></a></div>
+      <div class="carousel-item"><a href=""><img src="./asstes/carasol4.webp" class="d-block w-100" alt="..."></a></div>
+      <div class="carousel-item"><a href=""><img src="./asstes/carasol5.webp" class="d-block w-100" alt="..."></a></div>
+      <div class="carousel-item"><a href=""><img src="./asstes/carasol2.webp" class="d-block w-100" alt="..."></a></div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="product-container">
+    <!-- Product Card 1 -->
+    <div class="product-card" data-title="Luxury Sofa">
+      <div class="product-image">
+        <img src="./asstes/pro1.jpeg" alt="Luxury Sofa">
+        <div class="overlay">
+          <button class="quick-view" onclick="navigateWithSearchQuery('Luxury Sofa')">View Details</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">Luxury Sofa</h3>
+        <p class="product-desc">A stylish and comfortable sofa for modern spaces.</p>
+        <div class="price-rating">
+          <span class="price">$999.99</span>
+          <span class="rating">★ 4.8</span>
+        </div>
+        <button class="add-to-cart" onclick="addToCart('Luxury Sofa', 999.99)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="product-card" data-title="Dining Table Set">
+      <div class="product-image">
+        <img src="./asstes/dining table set1.jpg" alt="Dining Table Set">
+        <div class="overlay">
+          <button class="quick-view" onclick="navigateWithSearchQuery('Dining Table Set')">View Details</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">Dining Table Set</h3>
+        <p class="product-desc">Perfectly crafted dining table for family gatherings.</p>
+        <div class="price-rating">
+          <span class="price">$1,299.99</span>
+          <span class="rating">★ 4.6</span>
+        </div>
+        <button class="add-to-cart " onclick="addToCart('Portable Air Conditioner', 35894)">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="product-card" data-title="Luxury Bed">
+      <div class="product-image">
+        <img src="./asstes/bed1.jpg" alt="Luxury Bed">
+        <div class="overlay">
+          <button class="quick-view" onclick="navigateWithSearchQuery('Comfort Armchair')">View Details</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">Comfort Armchair</h3>
+        <p class="product-desc">Relax in style with this cozy and elegant armchair.</p>
+        <div class="price-rating">
+          <span class="price">$549.99</span>
+          <span class="rating">★ 4.7</span>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="product-card" data-title="Comfort Armchair">
+      <div class="product-image">
+        <img src="./asstes/comfirt armchair 1.jpg" alt="Comfort Armchair">
+        <div class="overlay">
+          <button class="quick-view" onclick="navigateWithSearchQuery('Comfort Armchair')">View Details</button>
+        </div>
+      </div>
+      <div class="product-details">
+        <h3 class="product-title">Comfort Armchair</h3>
+        <p class="product-desc">Relax in style with this cozy and elegant armchair.</p>
+        <div class="price-rating">
+          <span class="price">$549.99</span>
+          <span class="rating">★ 4.7</span>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Cart Dropdown -->
+  <div id="cart-dropdown" class="cart-dropdown">
+    <h4>Shopping Cart</h4>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <b>Total:</b><b><span id="total-price">Rs 0</span></b>
+    </div>
+    <button style="background-color: #0a3533; color: rgb(255, 255, 255); width: 100%; border: 0.3px solid rgb(255, 255, 255);" id="checkout-btn"
+      class="btn mt-3" onclick="checkout()">Confirm Order</button>
+  </div>
+
+
+
+
+  <div class="container2">
+    <div class="text-content">
+      <h1>Design your dream home with the perfect furniture</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the</p>
+      <button>Explore All Product</button>
+    </div>
+    <div class="image-content">
+      <img src="./asstes/homepic 2.png" alt="Furniture and Lamps">
+    </div>
+  </div>
+
+
+  <div class="container3">
+    <div class="left">
+      <img src="./asstes/homepic 5.png" alt="Background Image">
+      <img style="width: 60%;" src="./asstes/homepic 4.png" alt="Overlay Image" class="overlay-image">
+    </div>
+    <div class="right">
+      <h1>Designing Spaces That Sell</h1>
+      <div class="services">
+        <div class="service">
+          <i class="fa-solid fa-brush"></i>
+          <h3>Re-design</h3>
+          <p>Transform spaces with fresh layouts, modern styles, and innovative designs to breathe new life into your
+            environment.</p>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          <h3>Organizing</h3>
+          <p>Efficiently organize spaces to maximize utility and enhance functionality with smart, stylish solutions.
+          </p>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Idea & Processing</h3>
+          <p>Brainstorm and conceptualize creative ideas, turning them into actionable and practical design processes.
+          </p>
+        </div>
+        <div class="service">
+          <i class="fa-solid fa-palette"></i>
+          <h3>Material Selection</h3>
+          <p>Choose premium materials that complement your space, ensuring durability and aesthetic harmony.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="slider1">
+    <div class="slide-track1">
+      <div class="slide1"><img src="./asstes/slider img1.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img2.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img3.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img4.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img5.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img6.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img7.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img8.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img9.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img10.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img11.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img12.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img13.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img14.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img14.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img14.jpg" alt="" /></div>
+      <div class="slide"><img src="./asstes/slider img14.jpg" alt="" /></div>
+    </div>
+  </div>
+
+
+
+  <div class="container1">
+    <div class="image-section">
+      <img src="./asstes/homepic 1.png" alt="Yellow chair in a modern room">
+    </div>
+    <div class="text-section">
+      <h1>Transform Your Home with Modern Elegance</h1>
+      <p>At Modern Elegancy Furniture, we blend contemporary design with timeless aesthetics to redefine your living
+        space. Let us help you create a home that exudes style and comfort.</p>
+
+      <div class="service">
+        <h2>Professional Valuation Services</h2>
+        <p>Whether you are upgrading or redecorating, our experts offer precise furniture valuations to ensure every
+          piece is a perfect fit for your home.</p>
+      </div>
+
+      <div class="service">
+        <h2>Innovative Furniture Model Development</h2>
+        <p>From conceptual designs to crafted masterpieces, our team brings cutting-edge furniture models to life,
+          tailored to your unique taste and lifestyle.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="membership-banner hidden" id="membership-banner">
+    <div class="content">
+        <h1>GET DISCOUNT FROM MEMBERSHIP</h1>
+        <p>You can get DISCOUNT after joining our membership.</p>
+        <button class="open-modal-btn" onclick="openModal()">JOIN NOW</button>
+    </div>
+</div>
+
+
+
+  <div id="membershipModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Join Membership</h2>
+      <p>Sign up to enjoy exclusive discounts and benefits!</p>
+
+      <!-- Membership Form -->
+      <form id="membershipForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <section class="features">
+    <div class="features-container">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-paper-plane"></i>
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Enjoy swift and hassle-free delivery, ensuring your elegant furniture reaches your doorstep on time.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Secure Checkout</h3>
+        <p>Shop with confidence through our secure payment gateway, safeguarding your transactions every step of the
+          way.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h3>Member Discount</h3>
+        <p>Unlock exclusive offers and discounts by becoming a valued member of our modern furniture family.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <div class="modern-subscription">
+    <div class="subscription-box">
+      <div class="subscription-title">Join Our Newsletter</div>
+      <div class="subscription-text">Subscribe to get the latest updates and offers directly in your inbox.</div>
+      <form action="">
+        <div class="subscription-input-group">
+          <input type="email" class="subscription-input" placeholder="Enter your email address" required />
+          <button class="subscription-button" type="submit" name="subscribe">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+  <section style="margin: 5%;">
+    <section id="customer-reviews" class="container my-5">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="review-card p-4 border rounded shadow-sm">
+            <div class="reviewer-info mb-3">
+              <img src="./asstes/cus1.jpg" alt="Customer 1" class="reviewer-photo rounded-circle">
+              <div>
+                <h5 class="reviewer-name">John Doe</h5>
+                <div class="star-rating">
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bx-star" style="color: gold;"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">
+              "This product has exceeded my expectations! Excellent quality and value for the price."
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="review-card p-4 border rounded shadow-sm">
+            <div class="reviewer-info mb-3">
+              <img src="./asstes/cus2.jpg" alt="Customer 2" class="reviewer-photo rounded-circle">
+              <div>
+                <h5 class="reviewer-name">Jane Smith</h5>
+                <div class="star-rating">
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bx-star" style="color: gold;"></i>
+                  <i class="bx bx-star" style="color: gold;"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">
+              "Good quality, but it could be more durable. Still happy with my purchase!"
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="review-card p-4 border rounded shadow-sm">
+            <div class="reviewer-info mb-3">
+              <img src="./asstes/cus3.jpg" alt="Customer 3" class="reviewer-photo rounded-circle">
+              <div>
+                <h5 class="reviewer-name">Samuel Lee</h5>
+                <div class="star-rating">
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                  <i class="bx bxs-star" style="color: gold;"></i>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">
+              "Absolutely love this! The best purchase I’ve made all year. Will buy again."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+
+
+  <div class="container">
+    <p style="font-size: 26px; font-weight: bold;" class="paragraph">Life’s too short for ordinary. <br>
+      Unlock extraordinary.</p>
+    <p class="paragraph">We’re the world’s leading destination for designer-trusted home brands. Our experts vet each
+      product for meticulous craftsmanship and original design, so you can discover a wide selection of unique pieces –
+      and create a space that reflects you. With free shipping on most items, concierge service, and complimentary
+      design advice, we’re here to create a seamless experience, from inspiration to delivery.</p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Modern Elegancy</h3>
+        <p>
+          We are a global housewares product design company. We bring thought and
+          creativity to everyday items through original design.
+        </p>
+        <p><strong>Address:</strong> 1001 Milacian Crest Street, Paris, France</p>
+        <p><strong>Phone:</strong> (+084) 888 - 6789</p>
+        <p><strong>Email:</strong> <a href="mailto:Contact@ModernElegancy.com">Contact@ModernElegancy.com</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h3>OPENING TIME</h3>
+        <ul class="opening-hours">
+          <li>Mon - Fri: 8AM - 10PM</li>
+          <li>Sat: 9AM - 8PM</li>
+          <li>Sun: Closed</li>
+          <li>We Work All The Holidays</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Shopping Guide</a></li>
+          <li><a href="#">Delivery Information</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Our Store</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Link</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>FOLLOW US</h3>
+        <ul class="social-links">
+          <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+          <li><a href="#"><i class="fab fa-dribbble"></i>LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2015 Modern Eelgancy - Design by NooTheme - All rights reserved.</p>
+      <div class="payment-icons">
+        <img src="./asstes/logo2.jpg" alt="PayPal" />
+        <img src="./asstes/logo3.jpg" alt="American Express" />
+        <img src="./asstes/logo1.jpg" alt="Amazon" />
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search');
+      const productCards = document.querySelectorAll('.product-card');
+
+      if (!searchInput || productCards.length === 0) {
+        console.error('Error: search input or product cards are not found');
+        return;
+      }
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim(); 
+
+        productCards.forEach(card => {
+          const title = card.getAttribute('data-title').toLowerCase();  
+
+          if (title.includes(query)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';  
+          }
+        });
+      });
+    });
+
+
+
+    function navigateWithSearchQuery(productTitle) {
+      const searchInput = document.getElementById('search');
+      const searchQuery = searchInput ? searchInput.value.trim() : '';
+
+      const url = new URL('product-page.html', window.location.origin);
+      if (searchQuery) {
+        url.searchParams.set('search', searchQuery);
+      }
+      url.searchParams.set('product', productTitle);
+
+      window.location.href = url.toString(); 
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = urlParams.get('search') || ''; 
+      const productTitle = urlParams.get('product'); 
+
+      const productCards = document.querySelectorAll('.product-card');
+
+      if (searchQuery) {
+        productCards.forEach(card => {
+          const title = card.getAttribute('data-title').toLowerCase();
+          if (title.includes(searchQuery.toLowerCase())) {
+            card.style.display = 'block'; 
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (productTitle) {
+        productCards.forEach(card => {
+          const title = card.getAttribute('data-title');
+          if (title === productTitle) {
+            card.style.border = '2px solid #000';
+            card.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
+
+
+
+
+
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    let totalPrice = localStorage.getItem('totalPrice') ? parseInt(localStorage.getItem('totalPrice')) : 0;
+
+    function changeImg(imgElement) {
+        const mainImg = document.querySelector('.container > div > div > img');
+        mainImg.src = imgElement.src;
+    }
+
+    function addToCart(name, price) {
+        cartItems.push({ name, price });
+        totalPrice += price;
+        updateCart();
+        saveCartToLocalStorage();
+    }
+
+    function removeFromCart(index, event) {
+        event.stopPropagation();
+        totalPrice -= cartItems[index].price;
+        cartItems.splice(index, 1);
+        updateCart();
+        saveCartToLocalStorage();
+    }
+
+    function updateCart() {
+        const cartNotification = document.getElementById('cart-notification');
+        cartNotification.textContent = cartItems.length;
+
+        const cartDropdown = document.getElementById('cart-dropdown');
+        const cartItemsContainer = document.getElementById('cart-items');
+        cartItemsContainer.innerHTML = '';
+
+        cartItems.forEach((item, index) => {
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <b>${item.name}</b>
+                <span>Rs${item.price}</span>
+                <button class="delete-btn" onclick="removeFromCart(${index}, event)">
+                    <i class="fas fa-trash"></i>
+                </button>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+        });
+
+        const totalPriceElement = document.getElementById('total-price');
+        totalPriceElement.textContent = `Rs${totalPrice}`;
+    }
+
+    function saveCartToLocalStorage() {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        localStorage.setItem('totalPrice', totalPrice);
+    }
+
+    document.querySelector('.bag-icon').addEventListener('click', function (e) {
+        e.stopPropagation();
+        const cartDropdown = document.getElementById('cart-dropdown');
+        cartDropdown.classList.toggle('active');
+    });
+
+    function checkout() {
+        if (cartItems.length > 0) {
+            alert("THANK YOU FOR YOUR ORDER : YOUR ORDER HAS BEEN PLACED AND YOUR TOTAL AMOUNT IS RS " + totalPrice);
+            cartItems = [];
+            totalPrice = 0;
+            updateCart();
+            saveCartToLocalStorage();
+        } else {
+            alert("Your cart is empty");
+        }
+    }
+
+    document.addEventListener('click', function (e) {
+        const cartDropdown = document.getElementById('cart-dropdown');
+        const cartIcon = document.querySelector('.bag-icon');
+
+        if (!cartDropdown.contains(e.target) && !cartIcon.contains(e.target)) {
+            cartDropdown.classList.remove('active');
+        }
+    });
+
+    window.addEventListener('load', function () {
+        updateCart();
+    });
+    
+
+  </script>
+
+
+</body>
+
+</html>
