@@ -2080,7 +2080,7 @@ input:focus {
     }
     
     
-    .about-img-container img {
+    .img-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -2144,12 +2144,6 @@ input:focus {
     margin-left: 15%;
 }
 
-.mission-section h2 {
-    font-size: 38px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #000000;
-}
 
 .mission-section p {
     font-size: 18px;
