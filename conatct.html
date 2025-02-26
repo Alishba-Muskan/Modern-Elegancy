@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        ::-webkit-scrollbar {
+            width: 14px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000000;
+            border-radius: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #e1e1e0;
+            border-radius: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d98c0d;
+        }
+
+
+        .cart-notification {
+            position: absolute;
+            top: 8%;
+            right: 8.6%;
+            background-color: red;
+            color: rgb(255, 255, 255);
+            border-radius: 50%;
+            padding: 0.2rem 0.4rem;
+            font-size: 15px;
+            width: 26px;
+            height: 28px;
+            z-index: 99;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+
+        .nav1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            width: 100%;
+            padding: 0 5vw;
+            box-sizing: border-box;
+            height: auto;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            width: auto;
+        }
+
+        .logo img {
+            height: auto;
+            max-height: 5rem;
+            width: auto;
+            margin-bottom: 1%;
+            margin-left: -10%;
+        }
+
+        .cart-container {
+            display: flex;
+            align-items: center;
+            margin-right: 5%;
+        }
+
+        .cart-icon {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+
+
+
+
+
+
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            max-width: 300px;
+            width: 100%;
+            margin-top: 1rem;
+            position: relative;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 10px 30px 10px 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            border-bottom: 1px solid #535353;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-container input:focus {
+            border-bottom: 1px solid #a3a3a3;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            color: white;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .nav1 {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 5vw;
+            }
+
+            .logo {
+                justify-content: center;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+
+            .logo img {
+                max-height: 4rem;
+            }
+
+            .cart-container {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                right: -2%;
+                top: 0%;
+            }
+
+            .search-container {
+                width: 100%;
+                margin-bottom: 2%;
+                order: 3;
+                max-width: 100%;
+                margin-top: 1rem;
+            }
+
+            .search-container input {
+                width: 100%;
+            }
+
+            .cart-icon {
+                font-size: 2rem;
+                margin-top: 8%;
+                color: white;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .nav1 {
+                flex-direction: column;
+                align-items: center;
+                padding: 0 2rem;
+            }
+
+            .search-container {
+                order: 1;
+                width: 100%;
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+            }
+
+            .search-container input {
+                width: 80%;
+            }
+
+
+
+            .search-icon {
+                font-size: 14px;
+                right: 5px;
+            }
+        }
+
+        .home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            width: 100%;
+            background-color: #000000;
+            border-bottom: 0.5px solid #535353;
+        }
+
+        .home a {
+            text-decoration: none;
+            margin-left: 6%;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+
+
+        nav {
+            z-index: 99;
+            width: 100%;
+            background: rgb(0, 0, 0);
+        }
+
+        nav .navbar {
+            position: relative;
+            max-width: 1300px;
+            padding: 0px 30px;
+            height: 40px;
+            line-height: 40px;
+            letter-spacing: 0.5px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .nav-links {
+            display: inline-flex;
+            margin-left: 15%;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links li a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 2px 25px;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #dac593;
+        }
+
+        .nav-links .pro-list {
+            display: none;
+        }
+
+        .nav-links li:hover .list-box {
+            transition: all 0.3s ease;
+            top: 40px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .list-box {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 0 30px;
+            padding-bottom: 1px;
+            top: 100px;
+            opacity: 0;
+            z-index: 99;
+            visibility: hidden;
+            transition: 0.3s ease-in, visibility 0.3s ease-in;
+        }
+
+        .nav-links li:hover .list-box {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .list-box .content {
+            background: #1d1d1d;
+            padding: 25px 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .list-box .content .row {
+            width: calc(18% - 10px);
+            line-height: 25px;
+            position: relative;
+            left: 0%;
+        }
+
+        .content .row a {
+            text-decoration: none;
+            color: #f2f2f2;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .content .row a:hover {
+            text-decoration: none;
+            color: #dac593;
+            text-decoration: underline;
+        }
+
+        .navbar .btn {
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .navbar .btn.close-btn {
+            position: absolute;
+            right: 30px;
+            top: 10px;
+        }
+
+        .navbar .btn.close-btn:hover,
+        .btn.menu-btn:hover {
+            color: #dac593;
+        }
+
+        /* Media Query for Mobile (Below 1300px) */
+        @media screen and (max-width: 1200px) {
+            .navbar .btn {
+                display: block;
+            }
+
+            .navbar .nav-links {
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                max-width: 400px;
+                top: 0;
+                left: -100%;
+                background: #000000;
+                display: block;
+                padding: 50px 10px;
+                line-height: 50px;
+                z-index: 99;
+                overflow-y: auto;
+                box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+                transition: all 0.3s ease;
+            }
+
+            #menu-btn:checked~.nav-links {
+                left: -6%;
+                top: 16%;
+            }
+
+            #menu-btn:checked~.btn.menu-btn {
+                display: none;
+            }
+
+            #close-btn:checked~.btn.menu-btn {
+                display: block;
+            }
+
+            .nav-links li {
+                margin: 15px 10px;
+            }
+
+            .nav-links li a {
+                padding: 0 20px;
+                display: block;
+                font-size: 20px;
+            }
+
+            .nav-links .product {
+                display: block;
+            }
+
+            .nav-links .pro-list {
+                display: block;
+                color: #f2f2f2;
+                font-size: 20px;
+                font-weight: 500;
+                padding-left: 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links .pro-list:hover {
+                color: #dac593;
+                border-bottom: 1px solid #dac593;
+            }
+
+            .list-box {
+                position: static;
+                left: 0;
+                top: 65px;
+                opacity: 1;
+                visibility: visible;
+                max-height: 800px;
+                width: 100%;
+                overflow: visible;
+                transition: all 0.3s ease;
+            }
+
+            .list-box .content {
+                box-shadow: none;
+                flex-direction: column;
+            }
+
+            .list-box .content .row {
+                width: 100%;
+                margin-bottom: 25px;
+                margin-top: 15px;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .content .row a {
+                text-decoration: none;
+                color: white;
+                font-size: 14px;
+                padding-top: 20px;
+            }
+
+            .list-box img {
+                width: 15rem;
+            }
+
+
+            #showMega:checked~.list-box {
+                max-height: 800px;
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            #menu-btn:checked~.nav-links {
+                left: -8%;
+                top: 17%;
+            }
+
+        }
+
+
+        nav input {
+            display: none;
+        }
+
+
+
+
+
+
+        .contact-section-con {
+            text-align: center;
+            background-color: #e1e1e0;
+            padding: 50px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            top: -45%;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .contact-section-con {
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 30px;
+        }
+
+        .contact-form-con {
+            background: #e1e1e0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group-con {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group-con input {
+            flex: 1;
+            background-color: #e1e1e0;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            background-color: #e1e1e0;
+            padding: 12px;
+            border: none;
+            border-bottom: 1px solid #131313;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #002925;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1d1d1d;
+        }
+
+        @media (max-width: 1000px) {
+            .black div-con {
+                margin-top: 65%;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .black div-con {
+                margin-top: 65%;
+            }
+
+            .form-group-con {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            input,
+            textarea {
+                font-size: 14px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+
+
+
+
+
+        .container-map {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            margin-top: 10%;
+            margin-bottom: 15%;
+        }
+
+        .map {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .overlay-con {
+            position: absolute;
+            top: 25%;
+            left: -15%;
+            background: black;
+            color: white;
+            padding: 50px;
+            width: 380px;
+            line-height: 2.5rem;
+            height: 400px;
+            border-radius: 5px;
+        }
+
+        .overlay-con h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .overlay-con p {
+            color: white;
+            margin: 5px 0;
+        }
+
+
+
+
+
+
+        /* Footer Styling */
+        .footer {
+            background-color: #000000;
+            color: #d1d1d1;
+            padding: 50px 30px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-column {
+            flex: 1 1 200px;
+            margin: 15px;
+            min-width: 180px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            border-left: 4px solid #002925;
+            padding-left: 5%;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-column p,
+        .footer-column ul {
+            margin: 0 0 10px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul li a {
+            color: #d1d1d1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #807e7e;
+        }
+
+        .opening-hours li {
+            margin-bottom: 5px;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-links li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .social-links li a {
+            color: #d1d1d1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links li a:hover {
+            color: #fcb813;
+        }
+
+        .social-links li i {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding: 20px 0;
+            margin-top: 10px;
+        }
+
+        .footer-bottom p {
+            margin: 0 0 10px;
+            color: white;
+        }
+
+        .payment-icons img {
+            height: 45px;
+            margin: 0 8px;
+            transition: transform 0.3s;
+        }
+
+        .payment-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-column {
+                text-align: center;
+            }
+
+            .footer-column ul {
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav1">
+        <div class="search-container">
+            <input style="display: block;" type="text" id="search" placeholder="Search products...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+        <div class="logo">
+            <img class="img-fluid" src="./asstes/logo.png" alt="Logo">
+        </div>
+        <div class="cart-container">
+            <label class="bag-icon"><i class='bx bxs-shopping-bags cart-icon'></i><span id="cart-notification"
+                    class="cart-notification">0</span></label>
+        </div>
+    </nav>
+    <div class="home">
+        <a href="./index.html">Home</a>
+        <a href="./About.html">About</a>
+        <a href="./conatct.html">Contact</a>
+    </div>
+    <nav>
+        <a href=""></a>
+        <div class="navbar">
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li>
+                    <a href="./Product.html" class="product">Furniture</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="pro-list"></label>
+                    <div class="list-box">
+                        <div class="content">
+                            <div style="border: none;" class="row">
+                                <a href="#">Living Room Furniture</a>
+                                <a href="#">Coffee Table</a>
+                                <a href="#">Side Table</a>
+                                <a href="#">Chaise Lounges</a>
+                                <a href="#">Tv Stand</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">Home Office Furnit</a>
+                                <a href="#">Bedroom Furniture</a>
+                                <a href="#">Mattresses</a>
+                                <a href="#">Entryway & Hallway furnit</a>
+                                <a href="#">Kitchen & Dinning Room</a>
+                            </div>
+                            <img style="height: 15rem;" src="./asstes/1.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Product.html" class="product">Decor</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="pro-list"></label>
+                    <div class="list-box">
+                        <div class="content">
+                            <div style="border: none;" class="row">
+                                <a href="#">Wall Art & Decor</a>
+                                <a href="#">Photography</a>
+                                <a href="#">Paintings</a>
+                                <a href="#">Mirrors</a>
+                                <a href="#">Organizational Decor</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">Decorative Pillows</a>
+                                <a href="#">Wallpaper</a>
+                                <a href="#">Botancial</a>
+                                <a href="#">Curtains</a>
+                                <a href="#">Home Accents</a>
+                            </div>
+                            <img style="height: 15rem;" src="./asstes/2.webp" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Product.html" class="product">Outdoor</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="pro-list"></label>
+                    <div class="list-box">
+                        <div class="content">
+                            <div style="border: none;" class="row">
+                                <a href="#">Outdoor Lounge Furnit</a>
+                                <a href="#">Outdoor Sofas</a>
+                                <a href="#">Outdoor Dining Furnit</a>
+                                <a href="#">Grills & Outdoor Cooking</a>
+                                <a href="#">Planter</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">Patio Umbrella</a>
+                                <a href="#">Outdoor Rugs</a>
+                                <a href="#">Outdoor Fireplaces</a>
+                                <a href="#">Outdoor Furnit Cusions</a>
+                                <a href="#">Outdoor Lighting</a>
+                            </div>
+                            <img style="height: 15rem;" src="./asstes/3.webp" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Product.html" class="product">Lighting</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="pro-list"></label>
+                    <div class="list-box">
+                        <div class="content">
+                            <div style="border: none;" class="row">
+                                <a href="#">Ceiling Lighting</a>
+                                <a href="#">Wall Lighting</a>
+                                <a href="#">Lamps</a>
+                                <a href="#">Light Bulb & Accessories</a>
+                                <a href="#">Outdoor Lighting</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">Living Room Lighting</a>
+                                <a href="#">Bedroom Lighting</a>
+                                <a href="#">Kitchen Lighting</a>
+                                <a href="#">Bathroom Lighting</a>
+                                <a href="#">Entryway Lighting</a>
+                            </div>
+                            <img style="height: 15rem;" src="./asstes/4.webp" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Product.html" class="product">Rugs</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="pro-list"></label>
+                    <div class="list-box">
+                        <div class="content">
+                            <div style="border: none;" class="row">
+                                <a href="#">Area Rugs</a>
+                                <a href="#">One Of A Kind Rugs</a>
+                                <a href="#">Outdoor Rugs</a>
+                                <a href="#">Hallway Runners</a>
+                                <a href="#">Rugs</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">Wool Rugs</a>
+                                <a href="#">Silk Rugs</a>
+                                <a href="#">Sheepskin & Cowhide Rugs</a>
+                                <a href="#">Natural Fibre Rugs</a>
+                                <a href="#">Cotton Rugs</a>
+                            </div>
+                            <img style="height: 15rem;" src="./asstes/5.webp" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Product.html" class="product">Bedding</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="pro-list"></label>
+                    <div class="list-box">
+                        <div class="content">
+                            <div style="border: none;" class="row">
+                                <a href="#">All Bedding Sets & Singles</a>
+                                <a href="#">Duvet Covers & Sets</a>
+                                <a href="#">Quilts, Coverlets & Sets</a>
+                                <a href="#">Comforters & Sets</a>
+                                <a href="#">Sheets & Pillowcases</a>
+                                <a href="#">Blankets & Throws</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">Blankets & Throws</a>
+                                <a href="#">Bed Runners</a>
+                                <a href="#">Decorative Pillows</a>
+                                <a href="#">Mattresses</a>
+                                <a href="#">Down Conforters & Duvet Insert</a>
+                            </div>
+                            <img style="height: 15rem;" src="./asstes/6.webp" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Product.html" class="product">Bath</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="pro-list"></label>
+                    <div class="list-box">
+                        <div class="content">
+                            <div style="border: none;" class="row">
+                                <a href="#">Bathroom Lighting & Mirrors</a>
+                                <a href="#">Shower System</a>
+                                <a href="#">Bathroom Shelve & Storage</a>
+                                <a href="#">Bathroom Sink</a>
+                                <a href="#">Foucets & Drains</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">Towel Bar Rack & Stand</a>
+                                <a href="#">Bathroom Hardware Sets</a>
+                                <a href="#">Toilet Paper Holder</a>
+                                <a href="#">Cabinets & Drawer Pull</a>
+                                <a href="#">Floor & Wall Tiles</a>
+                            </div>
+                            <img style="height: 15rem;" src="./asstes/7.webp" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="./Product.html" class="product">kitchen</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="pro-list"></label>
+                    <div class="list-box">
+                        <div class="content">
+                            <div style="border: none;" class="row">
+                                <a href="#">Kitchen Sink</a>
+                                <a href="#">Kitchen Faucets</a>
+                                <a href="#">Cultery & Cutting Board</a>
+                                <a href="#">Cabinet Hardware</a>
+                                <a href="#">Appliances</a>
+                            </div>
+                            <div class="row">
+                                <a href="#">Kitchen Lighting</a>
+                                <a href="#">kitchen Organization & Accessories</a>
+                                <a href="#">Cookware</a>
+                                <a href="#">Bakeware</a>
+                                <a href="#">Coffee & Tea </a>
+                            </div>
+                            <img style="height: 15rem;" src="./asstes/8.webp" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+    <div class="black-div-con"
+        style="width: 100%; height: 400px; position: relative; top: 10%; background-color: black; display: flex;  align-items: center; justify-content: center; margin-top: 25%;">
+        <section class="contact-section-con">
+            <h2>Get in touch</h2>
+            <p>Conatct with modern elegancy furniture website and buy a new and modern designing furniture.</p>
+            <div class="contact-form-con">
+                <form action="#">
+                    <div class="form-group-con">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group-con">
+                        <input type="tel" name="phone" placeholder="Phone number" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+                    <textarea name="message" placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+
+    <div style="display: flex; align-items: center; justify-content: center; margin-top: -5%; margin-left: 8%; ">
+        <section class="container-map">
+            <iframe style="width: 100%; height: 580px; border: none;" class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.05469489556!2d66.8258184!3d25.1928371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf:0x9cf92f44555a0c23!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1676634603473!5m2!1sen!2s"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+
+            <div class="overlay-con">
+                <h2>Get in touch</h2>
+                <p><strong>📍 Address</strong><br>
+                    7624 Gartner Avenue<br>
+                    Corana, Manchester 11348</p>
+
+                <p><strong>📞 Contact</strong><br>
+                    (123) 456-7890<br>
+                    ModernElegancy@example.com</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Modern Elegancy</h3>
+                <p>
+                    We are a global housewares product design company. We bring thought and
+                    creativity to everyday items through original design.
+                </p>
+                <p><strong>Address:</strong> 1001 Milacian Crest Street, Paris, France</p>
+                <p><strong>Phone:</strong> (+084) 888 - 6789</p>
+                <p><strong>Email:</strong> <a href="mailto:Contact@ModernElegancy.com">Contact@ModernElegancy.com</a>
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h3>OPENING TIME</h3>
+                <ul class="opening-hours">
+                    <li>Mon - Fri: 8AM - 10PM</li>
+                    <li>Sat: 9AM - 8PM</li>
+                    <li>Sun: Closed</li>
+                    <li>We Work All The Holidays</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>ABOUT</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shopping Guide</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Our Store</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Link</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FOLLOW US</h3>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#"><i class="fab fa-dribbble"></i>LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2015 Modern Eelgancy - Design by NooTheme - All rights reserved.</p>
+            <div class="payment-icons">
+                <img src="./asstes/logo2.jpg" alt="PayPal" />
+                <img src="./asstes/logo3.jpg" alt="American Express" />
+                <img src="./asstes/logo1.jpg" alt="Amazon" />
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
