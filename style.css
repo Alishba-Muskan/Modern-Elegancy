@@ -1844,6 +1844,7 @@ input:focus {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: -12%;
     }
     
     .furniture-assembly {
@@ -1852,37 +1853,6 @@ input:focus {
       height: 200px;
     }
     
-    .wood-plank {
-      position: absolute;
-      width: 50px;
-      height: 10px;
-      background-color: #8b4513;
-      border-radius: 5px;
-    }
-    
-    .wood-plank.top {
-      top: 20px;
-      left: 50px;
-      animation: plank-animate 3s infinite;
-    }
-    
-    .wood-plank.bottom {
-      top: 140px;
-      left: 50px;
-      animation: plank-animate 3s 1s infinite;
-    }
-    
-    .wood-plank.left {
-      top: 50px;
-      left: 20px;
-      animation: plank-animate 3s 2s infinite;
-    }
-    
-    .wood-plank.right {
-      top: 50px;
-      left: 130px;
-      animation: plank-animate 3s 2.5s infinite;
-    }
     
     .screws, .hammer, .pliers {
       position: absolute;
@@ -1911,45 +1881,6 @@ input:focus {
       font-size: 2rem;
     }
     
-    .dust-cloud {
-      position: absolute;
-      top: 100px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 50px;
-      height: 50px;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(169, 169, 169, 0.7));
-      border-radius: 50%;
-      animation: dust-animate 3s infinite;
-    }
-    
-    .furniture-item {
-      position: absolute;
-      top: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      justify-content: space-between;
-      width: 150px;
-      opacity: 0;
-      animation: furniture-appear 3s ease-in forwards;
-    }
-    
-    .table, .chair {
-      background-color: #8b4513;
-      width: 40px;
-      height: 20px;
-    }
-    
-    .table {
-      height: 15px;
-    }
-    
-    .chair {
-      width: 15px;
-      height: 15px;
-      border-radius: 5px;
-    }
     
     .loading-text {
       margin-top: 20px;
@@ -1958,53 +1889,24 @@ input:focus {
       animation: text-animate 3s ease-in-out infinite;
     }
     
-    /* Keyframe Animations */
-    @keyframes plank-animate {
-      0%, 100% {
-        transform: scaleX(1);
-      }
-      50% {
-        transform: scaleX(1.2);
-      }
-    }
-    
     @keyframes tool-animate {
       0%, 100% {
         transform: rotate(0deg);
       }
       50% {
         transform: rotate(60deg);
+        color: #fcb613a4;
+
       }
     }
     
-    @keyframes dust-animate {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      50% {
-        transform: scale(1.5);
-        opacity: 0;
-      }
-    }
-    
-    @keyframes furniture-appear {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
     
     @keyframes text-animate {
       0% {
         color: white;
       }
       50% {
-        color: #fcb813;
+        color: #fcb613a4;
       }
       100% {
         color: white;
