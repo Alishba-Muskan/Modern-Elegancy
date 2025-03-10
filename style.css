@@ -1895,21 +1895,7 @@ input:focus {
       }
       50% {
         transform: rotate(60deg);
-        color: #fcb613a4;
 
-      }
-    }
-    
-    
-    @keyframes text-animate {
-      0% {
-        color: white;
-      }
-      50% {
-        color: #fcb613a4;
-      }
-      100% {
-        color: white;
       }
     }
   
